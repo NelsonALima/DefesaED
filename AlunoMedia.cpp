@@ -44,7 +44,7 @@ void cadastrarAluno() {
         return;
     }
 
-    Aluno novoAluno;
+    struct Aluno novoAluno;
     printf("Digite o nome do aluno: ");
     getchar();  // Limpa o buffer de entrada
     fgets(novoAluno.nome, sizeof(novoAluno.nome), stdin);  // Lê o nome do aluno
@@ -172,7 +172,7 @@ void carregarArquivo() {
 
     totalAlunos = 0;
     while (fgets(linha, sizeof(linha), arquivo)) {
-        Aluno aluno;
+        struct Aluno aluno;
         sscanf(linha, "%49[^;];%f;%f;%f", 
                aluno.nome, 
                &aluno.notas[0], 
